@@ -1,0 +1,111 @@
+@use "../../styles/mixins/mixins" as *;
+@use "../../styles/partials/colours" as *;
+
+.delete-inventory {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  background: #ffffff;
+  overflow: auto;
+  outline: none;
+  padding: 1rem 1rem 1.5rem;
+
+  @include tablet {
+    width: 42rem;
+    height: 16.375rem;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__close {
+    align-self: flex-end;
+  }
+
+  &__top-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    margin: 0;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 1.25rem 0 1rem;
+    line-height: 2.25rem;
+
+    @include tablet {
+      margin: 0 3rem 1rem;
+      font-size: 2rem;
+      padding: 0;
+    }
+  }
+
+  &__confirm-text {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-size: 0.9375rem;
+
+    @include tablet {
+      margin: 1rem 3rem 2rem;
+    }
+  }
+
+  &__cancel-delete {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+
+    @include tablet {
+      justify-content: flex-end;
+      padding-right: 3rem;
+    }
+  }
+
+  &__button {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    border-radius: 20px;
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: grab;
+
+    @include tablet {
+      width: auto;
+      padding: 0.5rem 1rem;
+    }
+
+    &--cancel {
+      color: $secondary-slate;
+      background-color: $primary-white;
+      border: 1px solid $secondary-cloud;
+    }
+
+    &--delete {
+      color: $primary-white;
+      background-color: $supporting-red;
+    }
+  }
+}

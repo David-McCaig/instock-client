@@ -1,0 +1,282 @@
+@use "../../styles/mixins/mixins.scss" as *;
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/fonts" as *;
+
+
+.inventory-add-form-top {
+
+    &__nav-div{
+        display: flex;
+        border-bottom: 1px solid $secondary-cloud;
+        padding: 0rem 1rem;
+        gap: 1rem;
+    }
+}
+
+a {
+    color: $primary-black;
+    font-size: 1.2rem;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+}
+
+.inventory-add-form{
+    padding: 0 2rem;
+    padding: 0 1rem 5rem;
+    margin-top: 2rem;
+    gap: 2rem;
+
+    @include tablet{
+        padding: 0 2rem 7rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    @include desktop{
+        gap: 6rem;
+    }
+
+    &__message{
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        color: $supporting-green;
+        font-size: 1.3rem;
+    }
+
+    &__item-details{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        flex-basis: 49%;
+        border-bottom: 1px solid $secondary-cloud;
+        padding-bottom: 2rem;
+
+        @include tablet{
+            border-bottom: none;
+            padding-bottom: 0rem;
+            padding-right: 2rem;
+            flex-basis: 49%;
+            border-right: 1px solid $secondary-cloud;
+        }
+
+        @include desktop{
+            flex-basis: 50%;
+        }
+    }
+
+    &__item-availability{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 35%;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        @include tablet{
+            margin-top: 0;
+            gap: 2rem;
+        }
+
+
+    }
+
+    &__description{
+        padding: 0.5rem;
+        border-radius: 1rem;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        font-size: 0.9rem;
+        color: #323232;
+        resize: none;
+        overflow: auto;
+        width: 100%;
+        border: 1px solid $secondary-cloud;
+        height: 7rem;
+
+        @include tablet{
+            height: 7rem;
+        }
+
+        @include desktop{
+            height: 10rem;
+        }
+
+
+        &:focus{
+            outline-color: $primary-indigo;
+        }
+    }
+
+
+    
+    &__name{
+        padding: 0.5rem;
+        border-radius: 1rem;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        font-size: 0.9rem;
+        color: #323232;
+        width: 100%;
+        border: 1px solid $secondary-cloud;
+
+        &:focus{
+            outline-color: $primary-indigo;
+        }
+    }
+
+    &__category{
+        padding: 0.5rem;
+        border-radius: 1rem;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        font-size: 0.9rem;
+        color: #323232;
+        width: 100%;
+        border: 1px solid $secondary-cloud;
+
+        &:focus{
+            outline-color: $primary-indigo;
+        }
+    }
+
+    &__warehouse{
+        padding: 0.5rem;
+        border-radius: 1rem;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        font-size: 0.9rem;
+        color: #323232;
+        width: 100%;
+        border: 1px solid $secondary-cloud;
+
+        &:focus{
+            outline-color: $primary-indigo;
+        }
+    }
+
+    &__button-container{
+        flex-basis: 100%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        @include tablet{
+            margin-top: 0;
+        }
+    }
+
+    &__add-button{
+        padding: 0 1rem;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        background-color: $primary-indigo;
+        border-radius: 1rem;
+        color: $primary-white;
+        border: none;
+        cursor: grab;
+        height: 2rem;
+        width: 50%;
+
+        @include tablet{
+            width: 15%;
+        }
+
+        @include desktop{
+            width: 10%;
+        }
+    }
+
+    &__cancel-button{
+        padding: 0 1rem;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        background-color: $primary-white;
+        border-radius: 1rem;
+        color: $secondary-slate;
+        border: 1px solid $secondary-cloud;
+        cursor: grab;
+        height: 2rem;
+        width: 50%;
+
+        @include tablet{
+            width: 15%;
+        }
+
+        @include desktop{
+            width: 10%;
+        }
+    }
+
+    &__status-container{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__radio-container{
+        display: flex;
+        align-items: center;
+    }
+
+    &__everything-radio-container{
+        display: flex;
+        gap:2rem;
+    }
+
+    &__label{
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        color: $secondary-slate;
+        cursor: grab;
+        width: 100%;
+
+        &:focus{
+            color: $primary-black;
+        }
+    }
+
+    &__quantity{
+        padding: 0 1rem;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        background-color: $primary-white;
+        border-radius: 1rem;
+        color: $secondary-slate;
+        border: 1px solid $secondary-cloud;
+        height: 2rem;
+        width: 40%;
+
+        @include tablet{
+            width: 40%;
+        }
+
+        @include desktop{
+            width: 32%;
+        }
+
+    }
+
+    &__headings{
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 600;
+        color: $primary-black;
+        padding-bottom: 0.5rem;
+    }
+
+    &__quantity-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__main-header{
+        margin: 0;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 600;
+
+        @include tablet{
+            margin: 1rem 0;
+        }
+    }
+
+}

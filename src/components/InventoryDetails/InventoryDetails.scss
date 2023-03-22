@@ -1,0 +1,247 @@
+@use "../../styles/mixins/mixins.scss" as *;
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/fonts" as *;
+
+.inventory-details {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $secondary-cloud;
+
+    &__top-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid #BDC5D5;
+        padding: 1rem 2rem;
+        align-items: center;
+
+        @include tablet {
+            height: 6rem;
+        }
+    }
+
+    &__name-container {
+        display: flex;
+        align-items: center;
+        width: 10%;
+        background-color: $primary-white;
+        border: 0rem;
+    }
+
+
+    &__button-container {
+        width: 6%;
+
+        @include tablet {
+            width: 10%
+        }
+
+    }
+
+    &__button-text {
+        display: none;
+
+        @include tablet {
+            display: contents;
+            margin: 0;
+        }
+
+    }
+
+    &__name {
+        color: $primary-black;
+        font-size: 1.75rem;
+        margin: 0rem;
+        padding: .5rem;
+        width: 13rem;
+        line-height: 2.5rem;
+
+        @include tablet {
+            font-size: 2rem;
+        }
+    }
+
+    &__container {
+
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &__heading {
+        font-family: "Titillium Web", sans-serif;
+        font-size: .6875rem;
+        color: $secondary-slate;
+        text-transform: uppercase;
+        margin-bottom: 0rem;
+
+        @include tablet {
+            font-size: .75rem;
+        }
+    }
+
+    &__text {
+        font-family: "Titillium Web", sans-serif;
+        font-size: .8125rem;
+        margin-top: .2rem;
+        max-width: 21rem;
+
+        @include tablet {
+            font-size: .875rem;
+            max-width: 28rem;
+        }
+
+        @include desktop {
+            max-width: 28.5rem;
+        }
+    }
+
+    &__text-status {
+        font-family: "Titillium Web", sans-serif;
+        font-size: .8125rem;
+        margin-top: 0rem;
+        max-width: 21rem;
+        text-align: center;
+
+        @include tablet {
+            font-size: .875rem;
+            max-width: 28rem;
+        }
+
+        @include desktop {
+            max-width: 29rem;
+
+        }
+    }
+
+    &__description-container {
+        padding-left: 0rem;
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__description-wrapper {
+        margin: 1rem 1.5rem 0rem 1.5rem;
+
+        @include tablet {
+            padding-right: 2.8rem;
+            margin: 1rem 1.5rem 2rem 2rem;
+            border-right: 1px $secondary-cloud solid;
+        }
+
+        @include desktop {
+            margin-left: 2.5rem;
+
+        }
+    }
+
+    &__container-bottom {
+
+        @include tablet {}
+    }
+
+    &__category-container {
+
+        @include tablet {
+            margin-top: 1.9rem;
+
+        }
+    }
+
+    &__category-status {
+        padding: 0rem 1.5rem;
+        flex-grow: 1;
+
+        @include tablet {
+            margin-top: 1rem;
+            width: 7.6rem;
+        }
+    }
+
+    &__category-quantity {
+        padding: 0rem 1.5rem;
+        flex-grow: 2;
+
+        @include tablet {
+            flex-grow: 0;
+            margin-top: .9rem;
+            margin-left: 5rem;
+        }
+
+        @include tablet {
+            margin-right: 4rem;
+        }
+
+        @include desktop {
+            margin-left: 150px;
+        }
+    }
+
+    &__category-heading {
+        padding: 0rem 1.5rem;
+    }
+
+    &__category-warehouse {
+        padding: 0rem 1.5rem;
+
+        @include tablet {
+            margin-top: 2rem;
+        }
+    }
+
+    &__container-bottom {
+        display: flex;
+    }
+
+    &__edit-icon {
+        padding: 0 1rem;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        background-color: $primary-indigo;
+        border-radius: 1.5rem;
+        color: #FFFFFF;
+        border: none;
+        cursor: grab;
+        height: 2rem;
+        width: 100%;
+        background-image: url('../../assets/images/icons/edit-24px white.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include tablet {
+            background-position: left;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-position: .5rem .4rem;
+            background-size: 1.2rem;
+            max-width: 4.5rem;
+        }
+
+
+    }
+
+    &__button-container {
+        width: 6%;
+
+        @include tablet {
+            width: 11%;
+        }
+
+    }
+
+    &__button-text {
+        display: none;
+
+        @include tablet {
+            display: contents;
+            margin: 0;
+            justify-content: center;
+            font-size: .8125rem;
+        }
+
+    }
+
+}

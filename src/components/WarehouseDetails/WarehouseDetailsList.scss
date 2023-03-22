@@ -1,0 +1,155 @@
+@use "../../styles/mixins/mixins.scss" as *;
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/fonts" as *;
+
+.warehouse-details{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $secondary-cloud;
+
+    &__top-container{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid #BDC5D5;
+        padding: 1rem 2rem;
+        align-items: center;
+    }
+
+    &__name-container{
+        display: flex;
+        align-items: center;
+    }
+
+    &__name{
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 600;
+        color: $primary-black;
+        text-decoration: none;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    &__heading{
+        color: $secondary-slate;
+        font-size: 0.8rem;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    &__text{
+        color: $primary-black;
+        font-size: 0.8rem;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    &__edit-icon{
+        padding: 0 1rem;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        background-color: $primary-indigo;
+        border-radius: 1.5rem;
+        color: #FFFFFF;
+        border: none;
+        cursor: grab;
+        height: 2rem;
+        width: 100%;
+        background-image: url('../../assets/images/icons/edit-24px white.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include tablet{
+            background-position: left;
+        }
+
+        
+    }
+
+    &__button-container{
+        width: 6%;
+
+        @include tablet{
+            width: 10%
+        }
+
+    }
+
+    &__button-text{
+        display: none;
+
+        @include tablet{
+            display: contents;
+            margin: 0;
+        }
+
+    }
+
+    &__address-container{
+        padding: 0 2rem;
+        margin: 1rem 0rem;
+
+        @include tablet{
+            border-right: 1px solid $secondary-cloud;
+            padding-right: 8rem;
+        }
+
+
+
+    }
+
+    &__contact-name-container{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex-basis: 50%;
+
+        @include tablet{
+            flex-basis: fit-content;
+        }
+    }
+
+    &__contact-info-container{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex-basis: 50%;
+
+        @include tablet{
+            flex-basis: fit-content;
+        }
+    }
+
+    &__all-contact-container{
+        padding: 0 2rem 2rem;
+        display: flex;
+
+        @include tablet{
+            gap: 4rem;
+            align-items: center;
+        }
+
+    }
+
+    &__address-contact-container{
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            @include desktop{
+                gap: 10rem;
+                justify-content: inherit;
+            }
+        }
+
+    }
+
+
+}
+
+a{
+    text-decoration: none;
+}

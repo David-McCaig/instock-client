@@ -1,0 +1,162 @@
+@use '../../styles/mixins/mixins.scss' as *;
+@use '../../styles/partials/colours' as *;
+
+.inventory {
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+
+    @include tablet {
+
+    }
+
+    &__everything-container {
+        @include tablet{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &__heading {
+        margin: 0;
+        font-family: "Titillium Web", sans-serif;
+        font-size: 2.25rem;
+        font-weight: 600;
+        line-height: 2.25rem;
+        padding: 3.25rem 0 1.5rem 0;
+
+        @include tablet {
+            font-size: 2rem;
+            padding: 0;
+        }
+    }
+
+    &__search-add-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__search-box {
+        height: 3.1rem;
+        width: 100%;
+        background-position: right;
+        padding: 1rem;
+        border: 1px solid $secondary-cloud;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        border-radius: 1.5rem;
+        background: transparent url("../../assets/images/icons/search-24px.svg") no-repeat 13px center;
+        background-position: right;
+
+        @include tablet {
+            height: 2.5rem;
+        }
+    }
+
+    &__button {
+        padding: 0 1rem;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        background-color: #2E66E5;
+        border-radius: 1.5rem;
+        color: #FFFFFF;
+        border: none;
+        cursor: grab;
+        height: 3.1rem;
+        width: 100%;
+
+        @include tablet {
+            height: 2.5rem;
+        }
+    }
+
+    &__container {
+        border-bottom: 1px solid #BDC5D5;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 1rem;
+        padding: 0 2rem;
+        padding-bottom: 1rem;
+
+
+        @include tablet {
+            border-bottom: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+        }
+    }
+
+    &__columns {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            background-color: #F7F8F9;
+            color: #5C667E;
+            font-size: 0.8rem;
+            width: 100%;
+            font-family: "Titillium Web", sans-serif;
+            font-weight: 600;
+            align-items: center;
+            padding: 0 2rem;
+        }
+    }
+
+    &__item{
+        @include tablet {
+            flex-basis: 20%
+        }
+    }
+
+    &__category {
+        @include tablet {
+            flex-basis: 20%;
+        }
+    }
+
+    &__status {
+
+        @include tablet {
+            flex-basis: 17%;
+        }
+
+        @include desktop{
+            flex-basis: 16%;
+        }
+    }
+
+    &__quantity {
+
+        @include tablet {
+            flex-basis: 12.5%;
+        }
+    }
+
+    &__warehouse {
+
+        @include tablet {
+            flex-basis: 22%;
+        }
+    }
+
+    &__actions {
+
+        @include tablet {
+            flex-basis: 5%;
+        }
+    }
+}
+
+
+
